@@ -4,13 +4,12 @@
 
 #include <iostream>
 #include "src/Solution_t000002_add_two_numbers.h"
+#include "src/Solution_t000009_palindrome_number.h"
 
 int main() {
-    Solution_t000002_add_two_numbers *solution = new Solution_t000002_add_two_numbers();
-    ListNode node1(2, new ListNode(4, new ListNode(3)));
-    ListNode node2(5, new ListNode(6, new ListNode(4)));
+    Solution_t000009_palindrome_number *solution = new Solution_t000009_palindrome_number();
 
-    solution->addTwoNumbers(&node1, &node2);
+    solution->isPalindrome(121);
 
     return 0;
 }
