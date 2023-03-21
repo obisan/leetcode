@@ -22,8 +22,7 @@ public:
 
         ListNode
                 *returnNode = nullptr,
-                *prevNode = nullptr,
-                *p_l1 = l1, *p_l2 = l2;
+                *prevNode = nullptr;
         int i_l1 = 0, i_l2 = 0, sum = 0, rank = 0;
 
         while (true) {
@@ -36,15 +35,15 @@ public:
             else
                 prevNode->next = newNode;
 
-            i_l1 = (p_l1 != nullptr) ? p_l1->val : 0;
-            i_l2 = (p_l2 != nullptr) ? p_l2->val : 0;
+            i_l1 = (l1 != nullptr) ? l1->val : 0;
+            i_l2 = (l2 != nullptr) ? l2->val : 0;
             sum = i_l1 + i_l2 + rank;
             rank = 0;
 
-            if (p_l1 != nullptr)
-                p_l1 = (p_l1->next != nullptr) ? p_l1->next : nullptr;
-            if (p_l2 != nullptr)
-                p_l2 = (p_l2->next != nullptr) ? p_l2->next : nullptr;
+            if (l1 != nullptr)
+                l1 = (l1->next != nullptr) ? l1->next : nullptr;
+            if (l2 != nullptr)
+                l2 = (l2->next != nullptr) ? l2->next : nullptr;
 
             newNode->val = sum % 10;
             prevNode = newNode;
@@ -52,7 +51,7 @@ public:
             if (sum > 9)
                 rank = 1;
 
-            if (p_l1 == nullptr && p_l2 == nullptr) {
+            if (l1 == nullptr && l2 == nullptr) {
                 if (rank == 1) {
                     prevNode->next = new ListNode(1);
                 }
