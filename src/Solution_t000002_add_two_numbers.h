@@ -18,7 +18,7 @@ struct ListNode {
 
 class Solution_t000002_add_two_numbers {
 public:
-    ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
+    static ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
 
         ListNode
                 *returnNode = nullptr,
@@ -29,7 +29,7 @@ public:
 
             i_l1 = i_l2 = sum = 0;
 
-            ListNode *newNode = new ListNode();
+            auto *newNode = new ListNode();
             if (returnNode == nullptr)
                 returnNode = newNode;
             else

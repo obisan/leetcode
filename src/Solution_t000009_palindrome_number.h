@@ -8,7 +8,7 @@
 
 class Solution_t000009_palindrome_number {
 public:
-    bool isPalindrome(int x) {
+    static bool isPalindrome(int x) {
         if (x < 0 || x!=0 && x%10==0) {
             return false;
         }
